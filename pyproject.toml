@@ -15,7 +15,10 @@ authors = [
 
 # ---- Runtime dependencies ----
 dependencies = [
+    "coverage>=7.13.1",
     "fastapi>=0.110.0",
+    "pyinstrument>=5.1.1",
+    "snakeviz>=2.2.2",
     "uvicorn[standard]>=0.40.0",
 ]
 
