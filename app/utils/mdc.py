@@ -13,7 +13,4 @@ def set_user_id(user_id: str):
 
 
 def get_mdc():
-    return {
-        "request_id": request_id_ctx.get(),
-        "user_id": user_id_ctx.get(),
-    }
+    return {"request_id": request_id_ctx.get(), "user_id": user_id_ctx.get()}

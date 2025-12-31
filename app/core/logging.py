@@ -2,9 +2,11 @@ import logging
 import sys
 from logging.handlers import RotatingFileHandler
 
+from app.core.settings import get_settings
 from app.utils.mdc import get_mdc
 
 _old_factory = logging.getLogRecordFactory()
+settings = get_settings()
 
 
 def record_factory(*args, **kwargs):
@@ -30,7 +32,7 @@ def setup_logging():
     logging.setLogRecordFactory(record_factory)
 
     root_logger = logging.getLogger()
-    root_logger.setLevel(logging.INFO)
+    root_logger.setLevel(settings.log_level)
 
     formatter = logging.Formatter("%(asctime)s %(levelname)s %(name)s %(message)s")
 

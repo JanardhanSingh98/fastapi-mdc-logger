@@ -15,16 +15,20 @@ authors = [
 
 # ---- Runtime dependencies ----
 dependencies = [
+    "asyncpg>=0.31.0",
     "coverage>=7.13.1",
     "fastapi>=0.110.0",
+    "pydantic-settings>=2.12.0",
     "pyinstrument>=5.1.1",
     "snakeviz>=2.2.2",
+    "sqlalchemy>=2.0.45",
     "uvicorn[standard]>=0.40.0",
 ]
 
 # ---- Optional / dev dependencies ----
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
+    "ty>=0.0.8",
     "black[d]>=25.1.0",
     "ruff>=0.4.0",
     "pytest>=8.0.0"
